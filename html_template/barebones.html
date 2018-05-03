@@ -7,6 +7,14 @@
 </head>
 
 <body>
+    <button class="test">Run myFunction</button>
+   
+    <script>
+        document.querySelector('.test')
+            .addEventListener('click', function() {
+                Module._my_function('testing');
+        });
+    </script>
     {{{ SCRIPT }}}
 </body>
 

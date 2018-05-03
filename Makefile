@@ -1,11 +1,13 @@
-level=O1 # O3 is hardcore :)
+level=O3 # O3 is hardcore :)
 shell_file=html_template/barebones.html
 entry=src/main.c
 
 # See 'init' below for things you need to get started
 
 build:
-	emcc -o dist/index.html $(entry) -$(level) -s WASM=1 --shell-file $(shell_file)
+	emcc -o dist/index.html $(entry) -$(level) \
+		-s WASM=1 \
+		--shell-file $(shell_file) \
 
 start:
 	http-server ./dist --cors -p 8080
